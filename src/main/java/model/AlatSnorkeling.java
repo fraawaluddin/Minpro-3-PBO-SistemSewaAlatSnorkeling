@@ -10,32 +10,32 @@ package model;
  */
 public class AlatSnorkeling extends AlatSelam {
 
-    private String jenisMasker;
+    private String jenisPerlengkapan;
 
     public AlatSnorkeling(String idAlat, String namaAlat, String ukuran,
             double tarifPerHari, String kondisi, int jumlahTersedia,
-            String jenisMasker) {
+            String jenisPerlengkapan) {
 
         super(idAlat, namaAlat, ukuran, tarifPerHari, kondisi, jumlahTersedia);
-        setJenisMasker(jenisMasker);
+        setJenisPerlengkapan(jenisPerlengkapan);
     }
 
-    public String getJenisMasker() {
-        return jenisMasker;
+    public String getJenisPerlengkapan() {
+        return jenisPerlengkapan;
     }
 
-    public void setJenisMasker(String jenisMasker) {
-        if (jenisMasker != null && !jenisMasker.trim().isEmpty()) {
-            this.jenisMasker = jenisMasker;
+    public void setJenisPerlengkapan(String jenisPerlengkapan) {
+        if (jenisPerlengkapan != null && !jenisPerlengkapan.trim().isEmpty()) {
+            this.jenisPerlengkapan = jenisPerlengkapan;
         } else {
-            System.out.println("Jenis masker tidak boleh kosong.");
+            System.out.println("Jenis perlengkapan tidak boleh kosong.");
         }
     }
 
     @Override
     public void tampilkanInfo() {
         tampilkanDataDasar();
-        System.out.println("Jenis Masker    : " + getJenisMasker());
+        System.out.println("Jenis Perlengkapan: " + getJenisPerlengkapan());
     }
     
     @Override
