@@ -177,18 +177,18 @@ public class SewaAlatView {
         return input.nextInt();
     }
     
-    public String inputJenisMasker() {
+    public String inputJenisPerlengkapan() {
         input.nextLine();
 
         while (true) {
-            System.out.print("Jenis Masker [contoh: Full Face]: ");
-            String jenisMasker = input.nextLine();
+            System.out.print("Jenis Perlengkapan [contoh: Set Masker dan Snorkel]: ");
+            String jenisPerlengkapan = input.nextLine();
 
-            if (!jenisMasker.trim().isEmpty()) {
-                return jenisMasker;
+            if (!jenisPerlengkapan.trim().isEmpty()) {
+                return jenisPerlengkapan;
             }
 
-            System.out.println("Jenis masker tidak boleh kosong");
+            System.out.println("Jenis perlengkapan tidak boleh kosong");
         }
     }
 
