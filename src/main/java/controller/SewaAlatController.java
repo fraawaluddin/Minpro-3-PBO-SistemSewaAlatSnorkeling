@@ -28,12 +28,12 @@ public class SewaAlatController {
 
         daftarAlat.add(new AlatSnorkeling(
                 "SNK01",
-                "Masker Snorkeling",
+                "Set Snorkeling",
                 "M",
-                5000,
+                15000,
                 "Baik",
                 10,
-                "Full Face"
+                "Set Masker dan Snorkel"
         ));
 
         daftarAlat.add(new AlatDiving(
@@ -322,7 +322,7 @@ public class SewaAlatController {
         }
 
         if (jenisAlat == 1) {
-            String jenisMasker = view.inputJenisMasker();
+            String jenisPerlengkapan = view.inputJenisPerlengkapan();
 
             AlatSnorkeling alatBaru = new AlatSnorkeling(
                     idAlat,
@@ -331,11 +331,10 @@ public class SewaAlatController {
                     tarifPerHari,
                     kondisi,
                     jumlahTersedia,
-                    jenisMasker
+                    jenisPerlengkapan
             );
 
             daftarAlat.add(alatBaru);
-
         } else {
             int kapasitasTabung = view.inputKapasitasTabung();
 
@@ -382,12 +381,12 @@ public class SewaAlatController {
                     return;
                 }
 
-                String jenisMasker = null;
+                String jenisPerlengkapan = null;
                 int kapasitasTabung = 0;
 
                 if (alat instanceof AlatSnorkeling) {
 
-                    jenisMasker = view.inputJenisMasker();
+                    jenisPerlengkapan = view.inputJenisPerlengkapan();
 
                 } else if (alat instanceof AlatDiving) {
 
@@ -403,7 +402,7 @@ public class SewaAlatController {
 
                 if (alat instanceof AlatSnorkeling) {
                     AlatSnorkeling alatSnorkeling = (AlatSnorkeling) alat;
-                    alatSnorkeling.setJenisMasker(jenisMasker);
+                    alatSnorkeling.setJenisPerlengkapan(jenisPerlengkapan);
 
                 } else if (alat instanceof AlatDiving) {
                     AlatDiving alatDiving = (AlatDiving) alat;
