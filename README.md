@@ -307,91 +307,95 @@ Screenshot tersebut menunjukkan ketika pengguna memilih menu keluar. Program men
 
 Program menyediakan validasi input untuk mencegah data yang tidak sesuai diproses oleh sistem.
 
-**Validasi Pilihan Menu:**
+### 1. Validasi Menu
 
 <img width="152" height="35" alt="image" src="https://github.com/user-attachments/assets/c5be0310-001e-4d03-8484-c07943cf0672" />
 
 Screenshot tersebut menunjukkan ketika pengguna memasukkan pilihan menu `99`, sedangkan pilihan yang tersedia hanya menu yang telah ditentukan. Sistem menolak input tersebut dan menampilkan pesan `Pilihan tidak tersedia`.
 
-**Validasi Jenis Alat:**
+### 2. Validasi Data Alat
+
+#### Validasi Jenis Alat
 
 <img width="292" height="130" alt="image" src="https://github.com/user-attachments/assets/7572c625-3d8a-4600-ab30-8b2fbe210130" />
 
 Screenshot tersebut menunjukkan ketika pengguna memasukkan pilihan jenis alat yang tidak tersedia. Sistem menolak pilihan tersebut dan meminta pengguna memilih jenis alat yang sesuai.
 
-**Validasi input kosong:**
+#### Validasi Input Kosong
 
 <img width="282" height="147" alt="image" src="https://github.com/user-attachments/assets/e30a7f0c-0ecf-4e8b-8080-820cc6f5bce3" />
 
 Screenshot tersebut menunjukkan ketika pengguna tidak mengisi input yang wajib diisi. Sistem mendeteksi input kosong, menampilkan pesan kesalahan, dan meminta pengguna memasukkan data kembali.
 
-**Validasi Tarif Per Hari:**
+#### Validasi Tarif Per Hari
 
 <img width="221" height="75" alt="image" src="https://github.com/user-attachments/assets/4ee4929c-385c-4cfa-8714-45c810d256af" />
 
 Screenshot tersebut menunjukkan ketika pengguna memasukkan tarif per hari dengan nilai `0`. Sistem menolak nilai tersebut karena tarif harus lebih dari `0`.
 
-**Validasi jumlah tersedia:**
+#### Validasi Jumlah Tersedia
 
 <img width="222" height="40" alt="image" src="https://github.com/user-attachments/assets/e6700b12-5fc5-4614-89ce-111396d65d54" />
 
 Screenshot tersebut menunjukkan ketika pengguna memasukkan jumlah tersedia dengan nilai yang tidak diperbolehkan. Sistem menolak jumlah negatif karena stok alat tidak boleh bernilai kurang dari `0`.
 
-**Validasi kondisi alat:**
+#### Validasi Kondisi
 
 <img width="197" height="41" alt="image" src="https://github.com/user-attachments/assets/b346aedb-70da-4bba-bfab-bae139248938" />
 
 Screenshot tersebut menunjukkan input kondisi alat dengan contoh format yang diberikan kepada pengguna. Sistem juga memastikan bahwa kondisi tidak boleh dikosongkan.
 
-**Validasi ID Alat:**
+#### Validasi ID Alat saat Mengubah
 
 <img width="141" height="32" alt="image" src="https://github.com/user-attachments/assets/5add4371-f8cc-48c5-b32b-ce56777fce90" />
 
 Screenshot tersebut menunjukkan ketika pengguna memasukkan ID alat yang tidak terdapat dalam data. Sistem menampilkan pesan `Alat tidak ditemukan` dan tidak melanjutkan proses perubahan.
 
-**Validasi ID Alat:**
+#### Validasi ID Alat saat Menghapus
 
 <img width="152" height="56" alt="image" src="https://github.com/user-attachments/assets/bb36f1f9-c604-4b20-83f8-d6ec15ad9063" />
 
 Screenshot tersebut menunjukkan ketika pengguna memasukkan ID alat yang tidak ditemukan. Sistem menolak proses penghapusan dan menampilkan pesan `Alat tidak ditemukan`.
 
-**Validasi Nama Penyewa:**
+### 3. Validasi Data Penyewaan
+
+#### Validasi Nama Penyewa
 
 <img width="197" height="42" alt="image" src="https://github.com/user-attachments/assets/2218c93b-277a-49fa-b143-c6306a2daf02" />
 
 Screenshot tersebut menunjukkan ketika nama penyewa dikosongkan. Sistem menolak input tersebut karena nama penyewa wajib diisi dan meminta pengguna memasukkan nama kembali.
 
-**Validasi ID Alat:**
+#### Validasi ID Alat
 
 <img width="131" height="27" alt="image" src="https://github.com/user-attachments/assets/b32a462c-6150-4c6a-be43-93f187de0082" />
 
 Screenshot tersebut menunjukkan ketika pengguna memasukkan ID alat yang tidak terdapat dalam data. Sistem menampilkan pesan `Alat tidak ditemukan` dan menghentikan proses penyewaan.
 
-**Validasi Jumlah Unit:**
+#### Validasi Jumlah Unit
 
 <img width="195" height="56" alt="image" src="https://github.com/user-attachments/assets/c8289c9b-de88-4c1f-b6a2-07abc042603e" />
 
 Screenshot tersebut menunjukkan ketika pengguna memasukkan jumlah unit `0`. Sistem menolak input tersebut karena jumlah unit yang disewa harus lebih dari `0`.
 
-### Validasi Ketersediaan Alat
-
-Sebelum transaksi penyewaan dibuat, sistem akan memeriksa jumlah alat yang tersedia. Jika jumlah unit yang diminta melebihi stok, transaksi tidak dapat dilanjutkan.
-
-Pada contoh berikut, alat `SNK01` memiliki jumlah stok yang tersedia sebanyak 8 unit, sedangkan jumlah unit yang ingin disewa adalah 9 unit. Sistem kemudian menolak proses penyewaan karena jumlah yang diminta melebihi stok.
-
-**Percobaan penyewaan melebihi stok:**
-
-<img width="277" height="147" alt="image" src="https://github.com/user-attachments/assets/bff9d3eb-137e-4207-9c08-3470ed0e8bca" />
-
-Screenshot tersebut menunjukkan ketika pengguna mencoba menyewa alat melebihi jumlah stok yang tersedia. Sistem menolak transaksi karena jumlah unit yang diminta lebih besar daripada stok alat.
-
-**Validasi Durasi Sewa:**
+#### Validasi Durasi Sewa
 
 <img width="232" height="45" alt="image" src="https://github.com/user-attachments/assets/0699ab2b-ec84-41ac-939a-e25b3aa2bc47" />
 
 Screenshot tersebut menunjukkan ketika pengguna memasukkan durasi penyewaan `0` hari. Sistem menolak input tersebut karena durasi penyewaan harus lebih dari `0` hari.
 
-**Validasi ID Penyewaan:**
+### 4. Validasi Ketersediaan Alat
+
+Sebelum transaksi penyewaan dibuat, sistem akan memeriksa jumlah alat yang tersedia. Jika jumlah unit yang diminta melebihi stok, transaksi tidak dapat dilanjutkan.
+
+Pada contoh berikut, alat `SNK01` memiliki jumlah stok yang tersedia sebanyak 8 unit, sedangkan jumlah unit yang ingin disewa adalah 9 unit. Sistem kemudian menolak proses penyewaan karena jumlah yang diminta melebihi stok.
+
+#### Percobaan Penyewaan Melebihi Stok
+
+<img width="277" height="147" alt="image" src="https://github.com/user-attachments/assets/bff9d3eb-137e-4207-9c08-3470ed0e8bca" />
+
+Screenshot tersebut menunjukkan ketika pengguna mencoba menyewa alat melebihi jumlah stok yang tersedia. Sistem menolak transaksi karena jumlah unit yang diminta lebih besar daripada stok alat.
+
+### 5. Validasi Pengembalian
 
 <img width="255" height="78" alt="image" src="https://github.com/user-attachments/assets/4c9d7cc1-71dd-4810-a348-ef5beccd14a8" />
 
